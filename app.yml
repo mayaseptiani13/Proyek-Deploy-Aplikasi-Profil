@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: web/index.html
+  upload: project/index.html
+
+- url: /(.*)
+  static_files: project/\1
+  upload: project/(.*)
